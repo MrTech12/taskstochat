@@ -36,7 +36,10 @@ After the JavaScript files are generated, Node.JS will be started on the `index.
 
 The program needs to run every morning, on 07:30 (7:30 AM). This is handled with a cron job, using [node-cron](https://www.digitalocean.com/community/tutorials/nodejs-cron-jobs-by-examples). <br><br>
 
-## Docker
+The project is created with the 'wrangler' CLI tool (v 2.0.15), from Cloudflare for serverless applications (workers). <br>
+To publish your Worker to the Internet, run `npm run deploy`
+
+<!-- ## Docker
 The Dockerfile can be used to create Docker images & containers. It is also available on [DockerHub](https://hub.docker.com/repository/docker/mrtech12/taskstochat). <br>
 To run a container, a couple environment variables need to be supplied in order to make it communicate with external services. A port needs to be supplied as well. <br>
 The environment values can be put in a file called `env.list` with the format of `key=value`. Quotes are not needed. <br> To pass the file to the container, use the `--env-file` flag. For the port, use the `-p` flag with this format: `0000:0000`.
@@ -47,7 +50,7 @@ The following variables & their values are needed:
 * IMPORTANT_TASK_FILTER_ID -- The ID of the filter, to retrieve all the important tasks of the day.
 * DISCORD_TOKEN -- The Discord token used to communicate with a Discord Bot.
 * DISCORD_CHANNEL_NAME -- The name of the Discord channel to send the message to.
-* TZ -- The timezone of the container to display the right time in the log messages. See this [link](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for accepted values.
+* TZ -- The timezone of the container to display the right time in the log messages. See this [link](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for accepted values. -->
 
 ## Deployment
 * The project may be deployed onto Cloudflare Workers, which have support for Cronjob triggers.
